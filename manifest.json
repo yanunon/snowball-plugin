@@ -1,0 +1,33 @@
+{
+    "name": "雪球简洁工具",
+    "version": "1.0.0",
+    "description": "雪球简洁工具",
+    "page_action": {
+        "default_icon": "images/snowball_320.png",
+        "default_title": "雪球简洁工具"
+    },
+    "background": {
+        "scripts": [
+            "background.js"
+        ],
+        "persistent": false
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "http://*.xueqiu.com/*",
+                "https://*.xueqiu.com/*"
+            ],
+            "js": [
+                "jquery-3.3.1.min.js",
+                "content.js"
+            ]
+        }
+    ],
+    "permissions": [
+        "declarativeContent",
+        "http://*.xueqiu.com/",
+        "https://*.xueqiu.com/"
+    ],
+    "manifest_version": 2
+}
